@@ -3,42 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Blog Layout</title>
+    <title>Multi-Column Blog Layout</title>
+    <style>
+        /* CSS for the grid container */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
+            gap: 20px; /* Gap between columns */
+			
+        }
+
+        /* CSS for each column */
+        .blog-column {
+            border: 1px solid #ddd;
+            padding: 20px;
+			width:150px;
+        }
+
+        /* CSS for article list */
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* CSS for article items */
+        .article-item {
+            margin-bottom: 10px;
+        }
+
+        /* CSS for column titles */
+        .column-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="blog-container">
-        <div class="column">
-            <h3>News</h3>
-            <ul>
-                <li>Article 1</li>
-                <li>Article 2</li>
-                <li>Article 3</li>
+    <div class="blog-grid">
+        <!-- Column 1 -->
+        <div class="blog-column">
+            <h2 class="column-title">News</h2>
+            <ul class="article-list">
+                <li class="article-item">Article 1</li>
+                <li class="article-item">Article 2</li>
+				<li class="article-item">Article 3</li>
+                <li class="article-item">Article 4</li>
+                <!-- Add more articles as needed -->
             </ul>
         </div>
-        <div class="column">
-            <h3>Reviews</h3>
-            <ul>
-                <li>Article 1</li>
-                <li>Article 2</li>
-				<li>Article 3</li>
+
+        <!-- Column 2 -->
+        <div class="blog-column">
+            <h2 class="column-title">Reviews</h2>
+            <ul class="article-list">
+                <li class="article-item">Article 1</li>
+				<li class="article-item">Article 2</li>
+				
+                <!-- Add more articles as needed -->
             </ul>
         </div>
-        <div class="column">
-            <h3>Tips & Tricks</h3>
-            <ul>
-                <li>Article 1</li>
-				<li>Article 2</li>
-				<li>Article 3</li>
+
+        <!-- Column 3 -->
+        <div class="blog-column">
+            <h2 class="column-title">Tips &Tricks</h2>
+            <ul class="article-list">
+                <!-- Add articles as needed -->
+				<li class="article-item">Article 1</li>
+                <li class="article-item">Article 2</li>
+                <li class="article-item">Article 3</li>
             </ul>
         </div>
-        <div class="column">
-            <h3>Interviews</h3>
-            <ul>
-                <!-- Add articles here -->
-				<li>Article 1</li>
-				<li>Article 2</li>
-				<li>Article 3</li>
+
+        <!-- Column 4 -->
+        <div class="blog-column ">
+            <h2 class="column-title">Interviews</h2>
+            <ul class="article-list ">
+				<li class="article-item">Article 1</li>
+                <li class="article-item">Article 2</li>
+                <li class="article-item">Article 4</li>
+                <li class="article-item">Article 5</li>
+                <li class="article-item">Article 6</li>
+                <!-- Add more articles as needed -->
             </ul>
         </div>
     </div>
